@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PlanVoyage | Plan your trip</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" type="image/x-icon" href="Images/icon.png" sizes="10px">
+</head>
+
+
+
+<style> 
+h1 {
+  text-align: center}
+
+  .photoTry-title h1 {
+	font-size: 3.5rem;
+	font-family: cursive;
+  }
+
+  .photoTry-title p {
+	margin: 1.8rem auto;
+    max-width: 900px;
+	text-align: center;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.7;
+	font-family: cursive;
+  }
+
+  .heading {
+    display: inline-block;
+  }
+
+  .heading span {
+    display: inline-block;
+    border: 2px solid #000;
+    font-size:larger;    
+    padding: 5px;
+    margin: 2px;
+  }
+
+  h1, p {
+    font-size: 2rem;
+  }
+
+  .gallery .box-container{
+  display: flex;
+  flex-wrap: wrap-reverse;
+
+}
+
+.gallery .box-container .box{
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  border:1rem solid #fff;
+  border-radius: .5rem;
+  flex:1 1 30rem;
+  height: 25rem;
+  position: relative;
+}
+
+.gallery .box-container .box img{
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+}
+
+.gallery .box-container .box .content{
+  position: absolute;
+  top:-100%; left:0;
+  height: 100%;
+  width:100%;
+  text-align: center;
+  background:rgba(0, 0, 0, 0.334);
+  padding:2rem;
+  padding-top: 5rem;
+}
+
+.gallery .box-container .box:hover .content{
+  top:0;
+}
+
+.gallery .box-container .box .content h3{
+  font-size: 2.5rem;
+  color:var(--orange);
+}
+
+.gallery .box-container .box .content p{
+  font-size: 1.5rem;
+  color:#ffffff;
+  padding:.5rem 0;
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  background:var(--orange);
+  color:#fff;
+  padding:.8rem 3rem;
+  border:.2rem solid var(--orange);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.7rem;
+  background-color: rgba(0, 0, 0, 0.306) ;
+}
+
+.btn:hover{
+  background:rgba(255, 255, 255, 0.467);
+  color:var(--orange);
+}
+
+a.btn {
+    text-decoration: none;
+  }
+
+.home{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+  z-index: 0;
+}
+
+.home .content{
+  text-align: center;
+}
+
+.home .content h3{
+  font-size: 4.5rem;
+  color:#fff;
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
+}
+
+.home .content p{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2.5rem;
+  color:#fff;
+  padding:.5rem 0;
+}
+
+.home .video-container video{
+  position: absolute;
+  top:0; left: 0;
+  z-index: -1;
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+}
+
+.home .controls{
+  padding:1rem;
+  border-radius: 5rem;
+  background:rgba(0,0,0,.7);
+  position: relative;
+  top:10rem;
+}
+
+.home .controls .vid-btn{
+  height:2rem;
+  width:2rem;
+  display: inline-block;
+  border-radius: 50%;
+  background:#fff;
+  cursor: pointer;
+  margin:0 .5rem;
+}
+
+.home .controls .vid-btn.active{
+  background-color:aqua;
+}
+
+.span{
+  font-size: 3.5rem;
+  background:rgba(255, 165, 0,.2);
+  color:var(--orange);
+  border-radius: .5rem;
+  padding:.2rem 1rem;}
+
+  #home {
+    padding-top: 100px; /* Adjust the value as needed */}
+
+    html {
+    scroll-behavior: smooth;
+  } 
+  
+    main {max-width: 1500px;}
+
+
+  </style>
+
+<body>
+<header>
+    <table>
+      <tr>
+        <td style="padding: 0px;">
+          <ul style="padding: 0px; margin: 0px;">
+          <div href="home.html">
+		        <img src = "Images/logo.png" alt="Logo" width="90" height="90">
+            <a href="home.html"><img src = "Images/planVoyage.png" alt="homepgreturn" width="200" height="80"></a>
+          </div>
+          </ul>
+        </td>
+      </tr>
+    </table>
+	
+    <nav>
+			<ul>
+				<a href="home.html"><button>Home</button></a>
+				<a href="destination.html"><button>Destination</button></a>
+				<a href="booking.html"><button>Booking</button></a>
+				<a href="payment.html"><button>Payment</button></a>
+				<a href="contact.html"><button>Contact</button></a>
+				<a href="SignUp.html"><button>Sign Up</button></a>
+			</ul>
+		</nav>
+	</header>
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3> an adventure awaits you</h3>
+        <p>dicover new places with us</p>
+        <a href="#footprints" class="btn">discover more</a>
+    </div>
+
+    <div class="video-container">
+        <video src="images/vid-1.mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<div id="footprints" class="photoTry-title">
+		<h1>Leave Your Footprints</h1>
+		<p>Welcome to our website! As a renowned travel agency, we specialize in crafting extraordinary travel experiences to enchanting
+		destinations across the globe. With our dedicated team of experts, we are committed to curating your dream vacation and ensuring 
+		a truly unforgettable journey. Whether your heart yearns for blissful moments on a sun-kissed tropical beach or thrilling explorations 
+		of vibrant cities, we have a diverse array of offerings tailored to cater to every traveler's desires. Get ready to embark on an 
+		extraordinary adventure with us.</p>
+	</div>
+</div>
+
+	<main>
+
+
+<!-- gallery section starts  -->
+<hr><br>
+<section class="gallery" id="gallery">
+    <center><h1 class="heading">
+        <span>G</span>
+        <span>A</span>
+        <span>L</span>
+        <span>L</span>
+        <span>E</span>
+        <span>R</span>
+        <span>Y</span>
+    </h1></center>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/south africa.jpg" alt="">
+            <div class="content">
+                <h3 style="color: white;">South Africa</h3>
+                <p>"South Africa's diverse wildlife, stunning landscapes, and vibrant culture mesmerize.</p>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-2.jpg" alt="">
+            <div class="content">
+                <h3 style="color: white" >Maldives</h3>
+                <p>Maldives, a tropical paradise, enchants with pristine beaches and turquoise waters.</p>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-3.jpg" alt="">
+            <div class="content">
+                <h3 style="color: white">Turkey</h3>
+                <p>Turkey enchants with its vibrant bazaars, stunning architecture, and cuisine.</p>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-4.jpg" alt="">
+            <div class="content">
+                <h3 style="color: white">Morroco</h3>
+                <p>Morocco entices with colorful markets, desert dunes, and rich heritage.</p>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-5.jpg" alt="">
+            <div class="content">
+                <h3 style="color: white">Japan</h3>
+                <p>Japan's rich heritage, cherry blossoms, and sushi delight travelers.</p>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-6.jpg" alt="">
+            <div class="content">
+                <h3 style="color: white">Makkah</h3>
+                <p>Makkah, a sacred city, draws pilgrims with spiritual devotion.</p>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-7.jpg" alt="">
+            <div class="content">
+                <h3 style="color: white">Brazil</h3>
+                <p>Brazil's vibrant culture, samba rhythms, and stunning landscapes enthrall.</p>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-8.jpg" alt="">
+            <div class="content">
+                <h3 style="color: white">Boston</h3>
+                <p>Boston, a historic city, charms with culture and academia.</p>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-9.jpg" alt="">
+            <div class="content">
+                <h3 style="color: white">Egypt</h3>
+                <p>Egypt's pyramids and pharaohs captivate with ancient mystique.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- gallery section ends -->
+		
+<hr><br>
+
+	<section>
+			<center><p style="font-family:serif">Take a look at our travel packages and start planning your next adventure today!</p>
+			<a href="destination.html"><button>View Travel Destination</button></a></center>
+			<br>
+	</section>
+</main>
+
+	<footer>
+		<p style="font-size: 16px;">&copy; 2023 PlanVoyage. All rights reserved.</p>
+	</footer>
+	<style>
+		* {box-sizing:border-box}
+	</style>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+
+
+</body>
+</html>

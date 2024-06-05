@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PlanVoyage | Destination</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Images/icon.png" sizes="10px">
+
+    <style>
+        main {max-width: 1200px;}
+
+        #myTable {
+        border-collapse: separate;
+        border-spacing: 5px;
+    }
+
+    #myTable td {
+        padding: 10px;
+        border: 1px solid #000;
+    }
+
+    h1, p {font-family: serif;}
+    h1 {font-size: 2.3rem;}
+    </style> 
+
+</head>
+<body>
+<header>
+    <table>
+      <tr>
+        <td style="padding: 0px;">
+          <ul style="padding: 0px; margin: 0px;">
+          <div href="home.html">
+		        <img src = "Images/logo.png" alt="Logo" width="90" height="90">
+                <a href="home.html"><img src = "Images/planVoyage.png" alt="homepgreturn" width="200" height="80"></a>
+            </div>
+          </ul>
+        </td>
+      </tr>
+    </table>
+        <nav>
+            <ul>
+                <a href="home.html"><button>Home</button></a>
+                <a href="destination.html"><button>Destination</button></a>
+                <a href="booking.html"><button>Booking</button></a>
+                <a href="payment.html"><button>Payment</button></a>
+                <a href="contact.html"><button>Contact</button></a>
+                <a href="SignUp.html"><button>Sign Up</button></a>
+            </ul>
+        </nav>
+</header>
+<style> 
+    h1, p {text-align: center}; 
+</style>
+
+<main>
+	<script>
+		function loadContent(id1) {
+			if(document.getElementById(id1).hidden == false){
+				document.getElementById(id1).hidden = true
+			}else{  document.getElementById(id1).hidden = false }   
+		}
+	</script>
+
+    <section style="text-align: center;">
+       <div>
+        <h1 style="font-family:serif">Travel Beyond Borders: Unveiling Hidden Gems Worldwide</h1>
+        <p style="font-family:serif; font-size: 1.5rem; ">We offer the best travel experience for your next adventure. Whether you're looking for a relaxing beach 
+        vacation or an exciting city getaway, we have the perfect package for you. Explore the world with ease by 
+        selecting from our list of popular travel destinations. </p>
+       </div>
+     <br>
+        <div>
+            <a href="booking.html"><button>Book Your Travel</button></a>            
+        </div>
+         <br><br>
+        <h1 style="font-family:serif">Explore the World</h1>
+        <br><hr>
+    </section>
+    
+    <section class="table sect">
+    <h2 class="right-title"></h2>
+    <table style="width: 100%">
+        <style>
+            table,tr,th,td {border:none; text-align: center}
+        </style>
+
+         <tr>
+            <td><h1>Florence</h1></th>
+            <p style="font-size: 1.6rem;">Florence is a beautiful city in central Italy, known for its stunning architecture, world-class museums, and delicious 
+            cuisine. Explore the charming streets, enjoy gelato by the Arno River, and immerse yourself in the city's rich history and 
+            culture.</p>
+            <button onclick="loadContent('CFlorence')">View Packages</button>
+        <center><center><table id="myTable">
+            <tbody id="CFlorence" hidden="true">
+        <tr>
+            <td><p style="font-size: 1.1rem">1 NIGHTS | 500 SAR Per Person </p></td>
+            <td><p style="font-size: 1.1rem">3 NIGHTS | 1000 SAR Per Person </p></td>
+        </tr>
+        <tr>
+            <td><p style="font-size: 1.1rem">5 NIGHTS | 1500 SAR Per Person </p></td>
+            <td><p style="font-size: 1.1rem">7 NIGHTS | 2000 SAR Per Person </p></td>
+        </tr>
+        
+            </tbody>
+        </table></center></center>
+            <td><img src="https://cdn.britannica.com/71/8671-050-2EE6A745/Cathedral-Florence-Santa-Maria-del-Fiore.jpg" 
+            alt="Florence" width="600" height="375"></td>
+        </tr>       
+                
+        <tr>
+            <td><img src="https://i2-prod.mirror.co.uk/incoming/article28871026.ece/ALTERNATES/s1200c/0_London-at-sunset.jpg" 
+            alt="Florence" width="600" height="375"></td>
+            <td><h1>London</h1></th>
+            <p style="font-size: 1.6rem;">London is a vibrant city with world-famous landmarks, rich history, diverse neighborhoods, and a vibrant culture. Explore
+            iconic landmarks and immerse yourself in the city's diverse neighborhoods and culture.</p>
+            <button onclick="loadContent('CLondon')">View Packages</button>
+        <center><table id="myTable">
+            <tbody id="CLondon" hidden="true">
+        <tr>
+            <td><p style="font-size: 1.1rem">1 NIGHTS | 500 SAR Per Person </p></td>
+            <td><p style="font-size: 1.1rem">3 NIGHTS | 1000 SAR Per Person </p></td>
+        </tr>
+        <tr>
+            <td><p style="font-size: 1.1rem">5 NIGHTS | 1500 SAR Per Person </p></td>
+            <td><p style="font-size: 1.1rem">7 NIGHTS | 2000 SAR Per Person </p></td>
+        </tr>
+        
+            </tbody>
+        </table></center>
+        
+        <tr>
+            <td><h1>Makkah</h1></th>
+            <p style="font-size: 1.6rem;">Makkah is a city located in the western region of Saudi Arabia. It is considered to be the 
+            holiest city in Islam and is the birthplace of the Prophet Muhammad PBUH.</p>
+            <button onclick="loadContent('content')">View Packages</button>
+        <center><table id="myTable">
+            <tbody id="content" hidden="true">
+        <tr>
+            <td><p style="font-size: 1.1rem">1 NIGHTS | 500 SAR Per Person </p></td>
+            <td><p style="font-size: 1.1rem">3 NIGHTS | 1000 SAR Per Person </p></td>
+        </tr>
+        <tr>
+            <td><p style="font-size: 1.1rem">5 NIGHTS | 1500 SAR Per Person </p></td>
+            <td><p style="font-size: 1.1rem">7 NIGHTS | 2000 SAR Per Person </p></td>
+        </tr>
+        
+            </tbody>
+        </table></center>
+            <td><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/bc/e6/87/exterior-view.jpg?w=700&h=-1&s=1" 
+            alt="Florence" width="600" height="375"></td>
+        
+        <tr>
+            <td><img src="https://media.istockphoto.com/id/688494594/photo/al-masjid-al-nabawi.jpg?s=612x612&w=0&k=20&c=wTrVBpUP3yB_TY1OZowiVKynWqfdol0MoIY9ZcItYoo=" 
+            alt="Florence" width="600" height="375"></td>
+            <td><h1>Al Madinah</h1></th>
+            <p style="font-size: 1.6rem;">Al-Madinah, is a city located in the Hejaz region of western Saudi Arabia. It is the second holiest city in Islam, 
+            after Makkah, and is the burial place of the Prophet Muhammad PBUH.</p>
+            <button onclick="loadContent('CMadinah')">View Packages</button>
+        <center><table id="myTable">
+            <tbody id="CMadinah" hidden="true">
+        <tr>
+            <td><p style="font-size: 1.1rem">1 NIGHTS | 800 SAR Per Person </p></td>
+            <td><p style="font-size: 1.1rem">3 NIGHTS | 1400 SAR Per Person </p></td>
+        </tr>
+        <tr>
+            <td><p style="font-size: 1.1rem">5 NIGHTS | 2000 SAR Per Person </p></td>
+            <td><p style="font-size: 1.1rem">7 NIGHTS | 2350 SAR Per Person </p></td>
+        </tr>
+        
+            </tbody>
+        </table></center>
+    
+        <tr>
+            <td><h1>Paris</h1></th>
+            <p style="font-size: 1.6rem;">Paris, the City of Light, is a magical destination with stunning architecture, world-class museums, and gastronomic 
+            delights. The Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral are must-see landmarks.</p>
+            <button onclick="loadContent('CParis')">View Packages</button>
+        <center><table id="myTable">
+            <tbody id="CParis" hidden="true">
+        <tr>
+            <td><p style="font-size: 1.1rem">1 NIGHTS | 500 SAR Per Person </p></td>
+            <td><p style="font-size: 1.1rem">3 NIGHTS | 1000 SAR Per Person </p></td>
+        </tr>
+        <tr>
+            <td><p style="font-size: 1.1rem">5 NIGHTS | 1500 SAR Per Person </p></td>
+            <td><p style="font-size: 1.1rem">7 NIGHTS | 2000 SAR Per Person </p></td>
+        </tr>
+        
+            </tbody>
+        </table></center>
+            <td><img src="https://cdn.sortiraparis.com/images/80/83517/812365-visuel-paris-paris-nuit.jpg" 
+            alt="Florence" width="600" height="375"></td>
+            
+        <tr>
+            <td><img src="https://www.arabnews.com/sites/default/files/styles/n_670_395/public/2019/05/08/1574191-1026725836.jpg?itok=5eOBS6HV" 
+            alt="Florence" width="600" height="375"></td>
+            <td><h1>Malaysia</h1></th>
+            <p style="font-size: 1.6rem;">Malaysia is a diverse country in Southeast Asia with beautiful landmarks such as the Petronas Twin Towers, Batu Caves, 
+            and Langkawi Island. Explore the vibrant cities, relax on stunning beaches, and experience the warm hospitality of the 
+            Malaysian people.</p>
+            <button onclick="loadContent('CMalaysia')">View Packages</button>
+        <center><table id="myTable">
+                <tbody id="CMalaysia" hidden="true">
+        <tr>
+                <td><p style="font-size: 1.1rem">1 NIGHTS | 500 SAR Per Person </p></td>
+                <td><p style="font-size: 1.1rem">3 NIGHTS | 1000 SAR Per Person </p></td>
+        </tr>
+        <tr>
+                <td><p style="font-size: 1.1rem">5 NIGHTS | 1500 SAR Per Person </p></td>
+                <td><p style="font-size: 1.1rem">7 NIGHTS | 2000 SAR Per Person </p></td>
+        </tr>
+        
+            </tbody>
+        </table></center>
+
+        <tr>
+            <td><h1>South Africa</h1></th>
+            <p style="font-size: 1.6rem;">South Africa is a diverse country located at the southern tip of the African continent, it caters to all kinds of 
+            travelers with its vibrant cities, stunning beaches, iconic national parks, diverse wildlife, scenic landscapes, cultural 
+            diversity, and world-renowned vineyards.</p>
+            <button onclick="loadContent('CSouthAfrica')">View Packages</button>
+        <table  id="myTable">
+                <tbody id="CSouthAfrica" hidden="true">
+        <tr>
+                <td><p style="font-size: 1.1rem">1 NIGHTS | 500 SAR Per Person </p></td>
+                <td><p style="font-size: 1.1rem">3 NIGHTS | 1000 SAR Per Person </p></td>
+        </tr>
+        <tr>
+                <td><p style="font-size: 1.1rem">5 NIGHTS | 1500 SAR Per Person </p></td>
+                <td><p style="font-size: 1.1rem">7 NIGHTS | 2000 SAR Per Person </p></td>
+        </tr>
+        
+            </tbody>
+        </table></center>
+                    <td><img src="Images/south africa.jpg" 
+            alt="Florence" width="600" height="375"></td>
+
+</table>
+</section>
+</main>
+        
+
+
+<footer>
+    <p>&copy; 2023 PlanVoyage. All rights reserved.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PlanVoyage | My Booking</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/x-icon" href="Images/icon.png" sizes="10px">
+<style>
+		.btn{
+		display: inline-block;
+		margin-top: 1rem;
+		background:var(--orange);
+		color:#fff;
+		padding:.8rem 3rem;
+		border:.2rem solid var(--orange);
+		border-radius: 20px;
+		cursor: pointer;
+		font-size: 1.7rem;
+		background-color: rgba(0, 0, 0, 0.248) ;
+		}
+
+		.btn:hover{
+		background:rgba(255, 165, 0,.2);
+		color:var(--orange);
+		}
+
+		a.btn {
+			text-decoration: none;
+		}
+
+		.home{
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-flow: column;
+		position: relative;
+		z-index: 0;
+		}
+
+		.home .content{
+		text-align: center;
+		}
+
+		.home .content p{
+		font-family: 'Courier New', Courier, monospace;
+		font-size: 2.5rem;
+		color:#fff;
+		}
+
+		.home .video-container video{
+		position: absolute;
+		top:0; left: 0;
+		z-index: -1;
+		height: 100%;
+		width:100%;
+		object-fit: cover;
+		}
+
+		.home .controls{
+		padding:1rem;
+		border-radius: 5rem;
+		background:rgba(0,0,0,.7);
+		position: relative;
+		top:10rem;
+		}
+
+		.home .controls .vid-btn{
+		height:2rem;
+		width:2rem;
+		display: inline-block;
+		border-radius: 50%;
+		background:#fff;
+		cursor: pointer;
+		margin:0 .5rem;
+		}
+
+		.home .controls .vid-btn.active{
+		background-color:aqua;
+		}
+
+		.span{
+		font-size: 3.5rem;
+		background:rgba(255, 165, 0,.2);
+		color:var(--orange);
+		border-radius: .5rem;
+		padding:.2rem 1rem;}
+
+		h1 {font-family:serif; font-size:3rem}
+</style>
+
+</head>
+<header>
+    <table>
+      <tr>
+        <td style="padding: 0px;">
+          <ul style="padding: 0px; margin: 0px;">
+          <div href="home.html">
+		        <img src = "Images/logo.png" alt="Logo" width="90" height="90">
+				<a href="home.html"><img src = "Images/planVoyage.png" alt="homepgreturn" width="200" height="80"></a>
+			</div>
+          </ul>
+        </td>
+      </tr>
+    </table>
+		<nav>
+			<ul>
+				<a href="home.html"><button>Home</button></a>
+				<a href="destination.html"><button>Destination</button></a>
+				<a href="booking.html"><button>Booking</button></a>
+				<a href="payment.html"><button>Payment</button></a>
+				<a href="contact.html"><button>Contact</button></a>
+				<a href="SignUp.html"><button>Sign Up</button></a>
+			</ul>
+		</nav>
+</header>
+
+<body>
+	<section class="home" id="home">
+
+		<div class="content">
+			<section>
+		<form action="/" class="decor">
+			<div class="form-inner">
+			<h1>Complete Your Booking</h1>
+			<table>
+				<tr>
+					<h3>Check-in Date</h3>
+					<input type="date" placeholder="Enter Date" required>
+				</tr>
+				<tr>
+					<h3>Check-out Date</h3>
+					<input type="date" placeholder="Enter Date" required><br>
+				</tr>
+			</table>
+				
+			<center><table>
+						<td>
+							<div class="custom-select" style="width:300px; font-size: 1.5rem;">
+								<select>
+								<option value="0">Select Destination:</option>
+								<option value="1">Makkah</option>
+								<option value="2">Al Madinah</option>
+								<option value="3">Florence</option>
+								  <option value="4">London</option>
+								<option value="5">Paris</option>
+								<option value="6">Malaysia</option>
+								<option value="7">South Africa</option>
+								</select>
+							</div>
+						</td>
+						<td>
+							<div class="custom-select" style="width:300px; font-size: 1.5rem;">
+								<select>
+								<option value="0">Select Package:</option>
+								<option value="1">1 Night</option>
+								<option value="2">2 Nights</option>
+								<option value="3">3 Nights</option>
+								<option value="4">4 Nights</option> 
+								<option value="5">5 Night</option>
+								<option value="6">6 Night</option> 
+								<option value="7">7 Night</option>
+								</select>
+						</div>	
+						</td>
+			</table></center>
+						
+			<br>
+			<input type="username" placeholder="Full Name" required>
+			<input type="email" placeholder="Email Address" required>
+			<input type="phone number" placeholder="Phone Number" required>
+			<input type="text" placeholder="Flight Number" required>
+			<br>
+			<br>
+				
+			<center><button type="button" onclick="redirectToPayment()">Continue to Payment</button></center>
+
+				<script>
+				  function redirectToPayment() {
+					window.location.href = "payment.html";
+				  }
+				</script>
+
+			</div>
+			</div>
+			</form>
+		</div>
+	
+		<div class="video-container">
+			<video src="images/vid-1.mp4" id="video-slider" loop autoplay muted></video>
+		</div>
+	
+	</section>
+	<script>
+					  var x, i, j, l, ll, selElmnt, a, b, c;
+					  /*look for any elements with the class "custom-select":*/
+					  x = document.getElementsByClassName("custom-select");
+					  l = x.length;
+					  for (i = 0; i < l; i++) {
+						selElmnt = x[i].getElementsByTagName("select")[0];
+						ll = selElmnt.length;
+						/*for each element, create a new DIV that will act as the selected item:*/
+						a = document.createElement("DIV");
+						a.setAttribute("class", "select-selected");
+						a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+						x[i].appendChild(a);
+						/*for each element, create a new DIV that will contain the option list:*/
+						b = document.createElement("DIV");
+						b.setAttribute("class", "select-items select-hide");
+						for (j = 1; j < ll; j++) {
+						  /*for each option in the original select element,
+						  create a new DIV that will act as an option item:*/
+						  c = document.createElement("DIV");
+						  c.innerHTML = selElmnt.options[j].innerHTML;
+						  c.addEventListener("click", function(e) {
+							  /*when an item is clicked, update the original select box,
+							  and the selected item:*/
+							  var y, i, k, s, h, sl, yl;
+							  s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+							  sl = s.length;
+							  h = this.parentNode.previousSibling;
+							  for (i = 0; i < sl; i++) {
+								if (s.options[i].innerHTML == this.innerHTML) {
+								  s.selectedIndex = i;
+								  h.innerHTML = this.innerHTML;
+								  y = this.parentNode.getElementsByClassName("same-as-selected");
+								  yl = y.length;
+								  for (k = 0; k < yl; k++) {
+									y[k].removeAttribute("class");
+								  }
+								  this.setAttribute("class", "same-as-selected");
+								  break;
+								}
+							  }
+							  h.click();
+						  });
+						  b.appendChild(c);
+						}
+						x[i].appendChild(b);
+						a.addEventListener("click", function(e) {
+							/*when the select box is clicked, close any other select boxes,
+							and open/close the current select box:*/
+							e.stopPropagation();
+							closeAllSelect(this);
+							this.nextSibling.classList.toggle("select-hide");
+							this.classList.toggle("select-arrow-active");
+						  });
+					  }
+					  function closeAllSelect(elmnt) {
+						/*a function that will close all select boxes in the document,
+						except the current select box:*/
+						var x, y, i, xl, yl, arrNo = [];
+						x = document.getElementsByClassName("select-items");
+						y = document.getElementsByClassName("select-selected");
+						xl = x.length;
+						yl = y.length;
+						for (i = 0; i < yl; i++) {
+						  if (elmnt == y[i]) {
+							arrNo.push(i)
+						  } else {
+							y[i].classList.remove("select-arrow-active");
+						  }
+						}
+						for (i = 0; i < xl; i++) {
+						  if (arrNo.indexOf(i)) {
+							x[i].classList.add("select-hide");
+						  }
+						}
+					  }
+					  /*if the user clicks anywhere outside the select box,
+					  then close all select boxes:*/
+					  document.addEventListener("click", closeAllSelect);
+
+					  
+					</script>	
+			
+	<footer>
+		<p>&copy; 2023 PlanVoyage. All rights reserved.</p>
+	</footer>
+</body>
+</html>

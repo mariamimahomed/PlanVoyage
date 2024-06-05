@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PlanVoyage | Contact</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/x-icon" href="Images/icon.png" sizes="10px">
+
+<script>
+	function openPopup() {
+		document.getElementById("popupBox").classList.add("active");
+	}
+
+	function closePopup() {
+		document.getElementById("popupBox").classList.remove("active");
+		window.location.href = "home.html";
+	}
+</script>
+
+</head>
+
+<style> form {justify-content: center} 
+#popupBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    visibility: hidden;
+}
+
+#popupContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#popupBox.active {
+    visibility: visible;
+}
+
+        .home{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+        position: relative;
+        z-index: 0;
+        }
+
+        .home .content{
+        text-align: center;
+        }
+
+        .home .content h3{
+        font-size: 4.5rem;
+        color:#fff;
+        font-family: 'Courier New', Courier, monospace;
+        text-transform: uppercase;
+        text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
+        }
+
+        .home .content p{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 2.5rem;
+        color:#fff;
+        }
+
+        .home .video-container video{
+        position: absolute;
+        top:0; left: 0;
+        z-index: -1;
+        height: 100%;
+        width:100%;
+        object-fit: cover;
+        }
+
+        .home .controls{
+        padding:1rem;
+        border-radius: 5rem;
+        background:rgba(0,0,0,.7);
+        position: relative;
+        top:10rem;
+        }
+        .span{
+        font-size: 3.5rem;
+        background:rgba(255, 165, 0,.2);
+        color:var(--orange);
+        border-radius: .5rem;
+        padding:.2rem 1rem;}
+
+		h2 {padding-top: 40px;}
+
+</style>
+
+<header>
+    <table>
+      <tr>
+        <td style="padding: 0px;">
+          <ul style="padding: 0px; margin: 0px;">
+          <div href="home.html">
+		        <img src = "Images/logo.png" alt="Logo" width="90" height="90">
+				<a href="home.html"><img src = "Images/planVoyage.png" alt="homepgreturn" width="200" height="80"></a>
+			</div>
+          </ul>
+        </td>
+      </tr>
+    </table>
+	
+		<nav>
+			<ul>
+				<a href="home.html"><button>Home</button></a>
+				<a href="destination.html"><button>Destination</button></a>
+				<a href="booking.html"><button>Booking</button></a>
+				<a href="payment.html"><button>Payment</button></a>
+				<a href="contact.html"><button>Contact</button></a>
+				<a href="SignUp.html"><button>Sign Up</button></a>
+			</ul>
+		</nav>
+	</header>
+		<body>
+    <section class="home" id="home">
+
+        <div class="content">
+            <section>
+      <form action="/" class="decor">
+        <div class="circle"></div>
+        <div class="form-inner">
+            <h1 style="font-family:serif">Contact us</h1>
+            <input type="username" placeholder="Username" required>
+            <input type="fullName" placeholder="Full Name" required>
+            <input type="Email" placeholder="Email" required>
+            <input type="Phone" placeholder="Phone Number" required>
+            <textarea placeholder="Message..." rows="10"></textarea required>
+            <br>
+
+            <center><button type="button" onclick="openPopup();">Submit</button></center>
+            <div id="popupBox">
+                <div id="popupContent">
+                    <center><h2>Thank you for your submission! <br> We will get back to you soon.</h2></center>
+                    <button type="button" onclick="closePopup();">Close</button>
+                </div>
+            </div>
+    
+        </div>
+	
+		</div>
+		</form>
+	</div>
+	<div class="video-container">
+            <video src="images/vid-1.mp4" id="video-slider" loop autoplay muted></video>
+        </div>
+		</section>
+
+	<footer>
+		<p>&copy; 2023 PlanVoyage. All rights reserved.</p>
+	</footer>	
+</body>
+
+</html>

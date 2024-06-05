@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PlanVoyage | Sign Up</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Images/icon.png" sizes="10px">
+
+    <style>
+		.btn{
+		display: inline-block;
+		margin-top: 1rem;
+		background:var(--orange);
+		color:#fff;
+		padding:.8rem 3rem;
+		border:.2rem solid var(--orange);
+		border-radius: 20px;
+		cursor: pointer;
+		font-size: 1.7rem;
+		background-color: rgba(0, 0, 0, 0.248) ;
+		}
+
+		.btn:hover{
+		background:rgba(255, 165, 0,.2);
+		color:var(--orange);
+		}
+
+		a.btn {
+			text-decoration: none;
+		}
+
+		.home{
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-flow: column;
+		position: relative;
+		z-index: 0;
+		}
+
+		.home .content{
+		text-align: center;
+		}
+
+		.home .content p{
+		font-family: 'Courier New', Courier, monospace;
+		font-size: 2.5rem;
+		color:#fff;
+		}
+
+		.home .video-container video{
+		position: absolute;
+		top:0; left: 0;
+		z-index: -1;
+		height: 100%;
+		width:100%;
+		object-fit: cover;
+		}
+
+		.home .controls{
+		padding:1rem;
+		border-radius: 5rem;
+		background:rgba(0,0,0,.7);
+		position: relative;
+		top:10rem;
+		}
+
+		.home .controls .vid-btn{
+		height:2rem;
+		width:2rem;
+		display: inline-block;
+		border-radius: 50%;
+		background:#fff;
+		cursor: pointer;
+		margin:0 .5rem;
+		}
+
+		.home .controls .vid-btn.active{
+		background-color:aqua;
+		}
+
+		.span{
+		font-size: 3.5rem;
+		background:rgba(255, 165, 0,.2);
+		color:var(--orange);
+		border-radius: .5rem;
+		padding:.2rem 1rem;}
+
+
+</style>
+
+<script>
+	function openPopup() {
+		document.getElementById("popupBox").classList.add("active");
+	}
+
+	function closePopup() {
+		document.getElementById("popupBox").classList.remove("active");
+		window.location.href = "home.html";
+	}
+</script>
+<style>
+#popupBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    visibility: hidden;
+}
+
+#popupContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#popupBox.active {
+    visibility: visible;
+}
+</style>
+</head>
+
+<header>
+    <table>
+      <tr>
+        <td style="padding: 0px;">
+          <ul style="padding: 0px; margin: 0px;">
+          <div href="home.html">
+		        <img src = "Images/logo.png" alt="Logo" width="90" height="90">
+            <a href="home.html"><img src = "Images/planVoyage.png" alt="homepgreturn" width="200" height="80"></a>
+          </div>
+          </ul>
+        </td>
+      </tr>
+    </table>
+		<nav>
+			<ul>
+        <a href="home.html"><button>Home</button></a>
+        <a href="destination.html"><button>Destination</button></a>
+        <a href="booking.html"><button>Booking</button></a>
+        <a href="payment.html"><button>Payment</button></a>
+        <a href="contact.html"><button>Contact</button></a>
+        <a href="SignUp.html"><button>Sign Up</button></a>
+      </ul>
+		</nav>
+</header>
+
+<style>
+  .checkbox-label {
+    display:inline-flex;
+    align-items: center;
+  }
+  </style>
+  
+
+<body>
+
+  <section class="home" id="home">
+
+    <div class="content">
+        <section>
+<form action="/" class="decor">
+      <div class="form-inner">
+      <h1 style="font-family:serif">Sign Up</h1>
+      <h1 style="font-family:serif">Please fill in this form to create an account</h1>
+      <input type="username" placeholder="Enter Username" required>
+      <input type="email" placeholder="Enter Email" required>
+      <input type="phone number" placeholder="Enter Phone Number" required>
+      <input type="password" placeholder="Enter Password" required>
+      <input type="password" placeholder="Repeat Password" required>
+      <br>          
+      <p><center>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a></center></p>
+  
+      <div class="clearfix" style="text-align: center;">
+
+        <center><button type="button" class="signupbtn" onclick="openPopup();">Sign Up</button></center>
+        <div id="popupBox">
+            <div id="popupContent">
+                <center><h2>Thank you for your submission! <br> We will get back to you soon.</h2></center>
+                <button type="button" onclick="closePopup();">Close</button>
+            </div>
+        </div>
+        <button type="button" class="cancelbtn">Cancel</button>
+
+        
+
+      </div> 
+      </div>
+    </form>
+    </section>
+    </div>
+
+
+<div class="video-container">
+        <video src="images/vid-1.mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+</section>
+</body>
+
+ <footer>
+    <p>&copy; 2023 PlanVoyage. All rights reserved.</p>
+</footer>
+</html>

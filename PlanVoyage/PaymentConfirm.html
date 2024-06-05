@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PlanVoyage | Payment Confirmation</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/x-icon" href="Images/icon.png" sizes="10px">
+
+
+	<script>
+		function goBack() {
+			window.history.back();
+		  } 
+		</script>
+	  
+		<style> 
+		.returnbutton {
+			position: absolute;
+			top: 10px;
+			left: 0;
+			padding: 10px 20px;
+			color: white;
+			border: none;
+			cursor: pointer;
+		  }
+
+		  .home{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+  z-index: 0;
+}
+
+.home .content{
+  text-align: center;
+}
+
+.home .content h3{
+  font-size: 4.5rem;
+  color:#fff;
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
+}
+
+.home .content p{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2.5rem;
+  color:#fff;
+  padding:.5rem 0;
+}
+
+.home .video-container video{
+  position: absolute;
+  top:0; left: 0;
+  z-index: -1;
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+}
+
+.home .controls{
+  padding:1rem;
+  border-radius: 5rem;
+  background:rgba(0,0,0,.7);
+  position: relative;
+  top:10rem;
+}
+
+.home .controls .vid-btn{
+  height:2rem;
+  width:2rem;
+  display: inline-block;
+  border-radius: 50%;
+  background:#fff;
+  cursor: pointer;
+  margin:0 .5rem;
+}
+
+.home .controls .vid-btn.active{
+  background-color:aqua;
+}
+
+.span{
+  font-size: 3.5rem;
+  background:rgba(255, 165, 0,.2);
+  color:var(--orange);
+  border-radius: .5rem;
+  padding:.2rem 1rem;}
+
+</style>
+
+
+</head>	
+<body>
+	<header>
+		<table>
+		  <tr>
+			<td style="padding: 0px;">
+			  <ul style="padding: 0px; margin: 0px;">
+			  <div href="home.html">
+					<img src = "Images/logo.png" alt="Logo" width="90" height="90">
+					<a href="home.html"><img src = "Images/planVoyage.png" alt="homepgreturn" width="200" height="80"></a>
+				</div>
+			  </ul>
+			</td>
+		  </tr>
+		</table>
+		<nav>
+			<ul>
+				<a href="home.html"><button>Home</button></a>
+				<a href="destination.html"><button>Destination</button></a>
+				<a href="booking.html"><button>Booking</button></a>
+				<a href="payment.html"><button>Payment</button></a>
+				<a href="contact.html"><button>Contact</button></a>
+				<a href="SignUp.html"><button>Sign Up</button></a>
+			</ul>
+		</nav>
+	</header>
+
+		<section class="home" id="home">
+
+			<div class="content">
+				<div class="returnbutton">
+					<button onclick="goBack()">Back</button>
+				</div>
+			
+				<section>
+					<center><img src="Images/check.png"></center>
+					<center><h1 style="color: white; font-family: serif; background-color: rgba(0, 0, 0, 0.316);">Your payment was successful</h1></center>
+					<center><h1 style="color: white; font-family: serif; background-color: rgba(0, 0, 0, 0.316);">Thank you for your purchase! We hope you enjoy your Journey</h1></center><br>
+					<center><h1 style="color: white; font-family: serif; background-color: rgba(0, 0, 0, 0.316);">We value your opinion</h1></center>
+					<center><button type="button" onclick="redirectToRating()">Rate Us</button></center>
+		
+					<script>
+					  function redirectToRating() {
+						window.location.href = "rating.html";
+					  }
+		
+					</script>
+				</section>
+			</div>
+		
+			<div class="video-container">
+				<video src="images/vid-1.mp4" id="video-slider" loop autoplay muted></video>
+			</div>
+		
+		</section>
+
+		
+
+			<script>
+			  function redirectToContact() {
+				window.location.href = "contact.html";
+			  }
+			</script>
+	
+</body>
+<footer>
+	<p>&copy; 2023 PlanVoyage. All rights reserved.</p>
+</footer>
+</html>

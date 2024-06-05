@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PlanVoyage | Payment Confirmation</title>
+	<link rel="stylesheet" type="text/css" href="ratingStyle.css">
+	<link rel="icon" type="image/x-icon" href="Images/icon.png" sizes="10px">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+	<script>
+		function openPopup() {
+			document.getElementById("popupBox").classList.add("active");
+		}
+		
+		function closePopup() {
+			document.getElementById("popupBox").classList.remove("active");
+			window.location.href = "home.html"; // Redirect to the home page
+		}
+		
+		function redirectToTyRating() {
+			openPopup();
+		}
+	</script>
+
+</head>	
+<body>
+	<header>
+		<table>
+		  <tr>
+			<td style="padding: 0px;">
+			<ul style="padding: 0px; margin: 0px;">
+			<div href="home.html">
+			<img src = "Images/logo.png" alt="Logo" width="90" height="90">
+			<a href="home.html"><img src = "Images/planVoyage.png" alt="homepgreturn" width="200" height="80"></a>
+			</div>
+			</ul>
+			</td>
+		  </tr>
+		</table>
+		<nav>
+			<ul>
+				<a href="home.html"><button>Home</button></a>
+				<a href="destination.html"><button>Destination</button></a>
+				<a href="booking.html"><button>Booking</button></a>
+				<a href="payment.html"><button>Payment</button></a>
+				<a href="contact.html"><button>Contact</button></a>
+				<a href="SignUp.html"><button>Sign Up</button></a>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<div class="returnbutton">
+			<button onclick="goBack()">Back</button>
+		</div>
+	
+		<script>
+			function goBack() {
+				window.history.back();
+			  } 
+			</script>
+		  
+			<style> 
+			.returnbutton {
+				position: absolute;
+				top: 100px;
+				left: 0;
+				padding: 10px 20px;
+				color: white;
+				border: none;
+				cursor: pointer;
+			  }
+			</style>
+		<body>
+			<div class="main-block">
+				<h1>Website Raiting Form</h1>
+				<form action="/">
+				  <div class="info">
+					<div class="info-item">
+					  <label class="icon" for="name"><i class="fas fa-user"></i></label>
+					  <input type="text" name="name" id="name" placeholder="Name" required/>
+					</div>
+					<div  class="info-item">
+					  <label class="icon" for="age"><i class="fas fa-calendar"></i></i></label>
+					  <input type="text" name="age" id="age" placeholder="Age" required/>
+					</div>
+					<div  class="info-item">
+					  <label class="icon" for="email"><i class="fas fa-envelope"></i></label>
+					  <input type="text" name="email" id="email" placeholder="Email" required/>
+					</div>
+					<div  class="info-item">
+					  <label class="icon" for="phone"><i class="fas fa-phone"></i></label>
+					  <input type="text" name="phone" id="phone" placeholder="Phone" required/>
+					</div>
+				  </div>
+				  <div class="grade-type">
+					<h3>Rate Our Website</h3>
+					<div> 
+					  <input type="radio" value="none" id="radioOne" name="grade" checked/>
+					  <label for="radioOne" class="radio">Excellent</label>
+					</div>
+					<div>
+					  <input type="radio" value="none" id="radioTwo" name="grade" />
+					  <label for="radioTwo" class="radio">Very Good</label>
+					</div>
+					<div>
+					  <input type="radio" value="none" id="radioThree" name="grade" />
+					  <label for="radioThree" class="radio">Good</label>
+					</div>
+					<div>
+					  <input type="radio" value="none" id="radioFour" name="grade" />
+					  <label for="radioFour" class="radio">Bad</label>
+					</div>
+					<div>
+					  <input type="radio" value="none" id="radioFive" name="grade" />
+					  <label for="radioFive" class="radio">Very Bad</label>
+					</div>
+				  </div>
+				  <h3>Please Comment on Your Rating</h3>
+				  <textarea rows="4"></textarea>
+				  <center><button type="button" onclick="redirectToTyRating();">Submit</button></center>
+
+				
+					<!-- Add the following code before the closing </body> tag -->
+					<div id="popupBox">
+						<div id="popupContent">
+							<h2>Thank you for your rating!</h2>
+							<button onclick="closePopup()">Close</button>
+						</div>
+					</div>
+
+				  </form>
+			  </div>
+</main>
+</body>
+<footer>
+	<p>&copy; 2023 PlanVoyage. All rights reserved.</p>
+</footer>
+</html>

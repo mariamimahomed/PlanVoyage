@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>PlanVoyage | Payment</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/x-icon" href="Images/icon.png" sizes="10px">
+</head>
+
+	<style>
+		* {
+		  box-sizing: border-box;
+		}
+		
+		.row {
+		  display: -ms-flexbox; /* IE10 */
+		  display: flex;
+		  -ms-flex-wrap: wrap; /* IE10 */
+		  flex-wrap: wrap;
+		  margin: 0 -16px;
+		}
+		
+		.col-25 {
+		  -ms-flex: 25%; /* IE10 */
+		  flex: 25%;
+		}
+		
+		.col-50 {
+		  -ms-flex: 50%; /* IE10 */
+		  flex: 50%;
+		}
+		
+		.col-75 {
+		  -ms-flex: 75%; /* IE10 */
+		  flex: 100%;
+		}
+		
+		.col-25,
+		.col-50,
+		.col-75 {
+		  padding: 0 40px;
+		}
+		
+		input[type=text] {
+		  width: 100%;
+		  margin-bottom: 20px;
+		  padding: 12px;
+		  border: 1px solid #000000;
+		  border-radius: 3px;
+		}
+		
+		label {
+		  margin-bottom: 10px;
+		  display: block;
+		  text-align: ;
+		}
+		
+		.icon-container {
+		  margin-bottom: 20px;
+		  padding: 7px;
+		  font-size: 34px;
+		}
+		
+		a {
+		  color: #2196F3;
+		}
+		
+		hr {
+		  border: 1px solid lightgrey;
+		}
+		
+		span.price {
+		  float: right;
+		  color: grey;
+		}
+		
+		/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+		@media (max-width: 800px) {
+		  .row {
+			flex-direction: column-reverse;
+		  }
+		  .col-25 {
+			margin-bottom: 20px;
+		  }
+		}
+		
+		main {
+			flex-grow: 1;
+			max-width: 100%;
+			padding: 0;
+		}
+
+.home{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+  z-index: 0;
+}
+
+.home .content{
+  text-align: center;
+}
+
+.home .content p{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2.5rem;
+  color:#fff;
+  padding:.5rem 0;
+}
+
+.home .video-container video{
+  position: absolute;
+  top:0; left: 0;
+  z-index: -1;
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+}
+
+.home .controls{
+  padding:1rem;
+  border-radius: 5rem;
+  background:rgba(0,0,0,.7);
+  position: relative;
+  top:10rem;
+}
+
+.span{
+  font-size: 3.5rem;
+  background:rgba(255, 165, 0,.2);
+  color:var(--orange);
+  border-radius: .5rem;
+  padding:.2rem 1rem;}
+
+</style>
+
+<header>
+    <table>
+      <tr>
+        <td style="padding: 0px;">
+          <ul style="padding: 0px; margin: 0px;">
+          <div href="home.html">
+		        <img src = "Images/logo.png" alt="Logo" width="90" height="90">
+				<a href="home.html"><img src = "Images/planVoyage.png" alt="homepgreturn" width="200" height="80"></a>
+			</div>
+          </ul>
+        </td>
+      </tr>
+    </table>
+		<nav>
+			<ul>
+				<a href="home.html"><button>Home</button></a>
+				<a href="destination.html"><button>Destination</button></a>
+				<a href="booking.html"><button>Booking</button></a>
+				<a href="payment.html"><button>Payment</button></a>
+				<a href="contact.html"><button>Contact</button></a>
+				<a href="SignUp.html"><button>Sign Up</button></a>
+			</ul>
+		</nav>
+	</header
+	
+	<body>
+
+<section>
+		<section class="home" id="home">
+
+			<div class="content">
+				<div class="row">
+					<div class="col-75">
+					  <div class="container">
+						<form action="/action_page.php">
+							<div class="form-inner">
+						  <div class="row">
+							<div class="col-50">
+							  <h1 style="font-family:serif; text-align: center">Billing Address</h1>
+							  <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+							  <input type="text" id="fname" name="firstname" placeholder="John M. Doe" required>
+							  <label for="email"><i class="fa fa-envelope"></i> Email</label>
+							  <input type="text" id="email" name="email" placeholder="john@example.com" required>
+							  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+							  <input type="text" id="adr" name="address" placeholder="7721 Prince Sultan Street" required>
+							  <label for="city"><i class="fa fa-institution"></i> City</label>
+							  <input type="text" id="city" name="city" placeholder="Jeddah" required>
+							  <div class="row">
+								<div class="col-50">
+								  <label for="Province">Province</label>
+								  <input type="text" id="state" name="province" placeholder="Mecca Province">
+								</div>
+								<div class="col-50">
+								  <label for="zip">Zip</label>
+								  <input type="text" id="zip" name="zip" placeholder="23617">
+								</div>
+							  </div>
+							</div>
+				  
+							<div class="col-50">
+							  <h1 style="font-family:serif; text-align: center">Payment</h1>
+							  <label for="fname">Accepted Cards</label>
+							  <div class="icon-container">
+								<i class="fa fa-cc-visa" style="color:navy;"></i>
+								<i class="fa fa-cc-amex" style="color:blue;"></i>
+								<i class="fa fa-cc-mastercard" style="color:red;"></i>
+								<i class="fa fa-cc-discover" style="color:orange;"></i>
+							  </div>
+							  <label for="cname">Name on Card</label>
+							  <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+							  <label for="ccnum">Credit card number</label>
+							  <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+							  <label for="expmonth">Exp Month</label>
+							  <input type="text" id="expmonth" name="expmonth" placeholder="September">
+							  <div class="row">
+								<div class="col-50">
+								  <label for="expyear">Exp Year</label>
+								  <input type="text" id="expyear" name="expyear" placeholder="2025">
+								</div>
+								<div class="col-50">
+								  <label for="cvv">CVV</label>
+								  <input type="text" id="cvv" name="cvv" placeholder="352">
+								</div>
+							  </div>
+							</div>
+							</div>
+						  </div>
+						  <label style="font-size: 20px;">
+							<center><input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing</center>
+						  </label>
+						  
+						  <center><button type="button" onclick="redirectToPaymentConfirm()">Checkout</button></center><br>
+						  <script>
+						  function redirectToPaymentConfirm() {
+							  window.location.href = "paymentconfirm.html";
+						  }
+						  </script> 
+	  
+						</form>
+					  </div>
+					</div>
+				  </div>
+			</div>
+		
+			<div class="video-container">
+				<video src="images/vid-1.mp4" id="video-slider" loop autoplay muted></video>
+			</div>
+		</section>
+		
+		</section>
+
+		</section></body>
+	<footer>
+		<p>&copy; 2023 PlanVoyage. All rights reserved.</p>
+	</footer>
+
+</html>
